@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{7A7B8038-4D24-48CD-8D77-C23DC655B82A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{1587720B-BDD0-44C3-8C66-9A75D4E5ACDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AB85EAD6-2281-4A6A-8A4F-4A0CBC8E6F3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineExam.Web", "Applications\OnlineExam.Web\OnlineExam.Web.csproj", "{ED317887-8E42-4835-B465-A812A476DE06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED317887-8E42-4835-B465-A812A476DE06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED317887-8E42-4835-B465-A812A476DE06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED317887-8E42-4835-B465-A812A476DE06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED317887-8E42-4835-B465-A812A476DE06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ED317887-8E42-4835-B465-A812A476DE06} = {7A7B8038-4D24-48CD-8D77-C23DC655B82A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1DAC5DF-336C-4A7A-8A6E-EE6503C14947}
+	EndGlobalSection
+EndGlobal
