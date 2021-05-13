@@ -2,7 +2,90 @@
 @{
     ViewData["Title"] = "AddOrganization";
 }
-<div class="container">
-    <h1>AddOrganization</h1>
-</div>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Organization</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-controller="Organization" asp-action="Index">Organization</a></li>
+                    <li class="breadcrumb-item active">Add Organization</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
 
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-8">
+                <!-- general form elements -->
+                <!-- Horizontal Form -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Add New Organization</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form class="form-horizontal">
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="name" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="code" class="col-sm-2 col-form-label">Code</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="code" placeholder="Code">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="address" class="col-sm-2 col-form-label">Address</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="address" placeholder="Address">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="contactNo" class="col-sm-2 col-form-label">Contact No</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="contactNo" placeholder="Contact No">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="about" class="col-sm-2 col-form-label">About</label>
+                                <div class="col-sm-10">
+                                    <textarea type="text" class="form-control" id="about" placeholder="About"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="logo" class="col-sm-2 col-form-label" >Logo</label>
+                                <div class="col-sm-10">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="logo">
+                                        <label class="custom-file-label" for="logo"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Create</button>
+                            <button type="submit" class="btn btn-default float-right">Cancel</button>
+                        </div>
+                        <!-- /.card-footer -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
