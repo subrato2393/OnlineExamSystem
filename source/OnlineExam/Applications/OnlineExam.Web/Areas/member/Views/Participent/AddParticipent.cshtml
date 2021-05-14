@@ -2,7 +2,163 @@
 @{
     ViewData["Title"] = "AddParticipent";
 }
-<div class="container">
-    <h1>AddParticipent</h1>
-</div>
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Participant</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-controller="Participant" asp-action="Index">Participant</a></li>
+                    <li class="breadcrumb-item active">Add Trainer</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
 
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-8">
+                <!-- general form elements -->
+                <!-- Horizontal Form -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Add New Participant</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form class="form-horizontal">
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label for="organization" class="col-sm-3 col-form-label">Organization</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control">
+                                        <option>Select</option>
+                                        <option>option 1</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="course" class="col-sm-3 col-form-label">Course</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control">
+                                        <option>Select</option>
+                                        <option>option 1</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="batch" class="col-sm-3 col-form-label">Batch</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control">
+                                        <option>Select</option>
+                                        <option>option 1</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="name" class="col-sm-3 col-form-label">Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="name" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="registrationNo" class="col-sm-3 col-form-label">Registration No</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="registrationNo" placeholder="Registration No">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="contactNo" class="col-sm-3 col-form-label">Contact No</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="contactNo" placeholder="Contact No">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-3 col-form-label">Email</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="addressLine1" class="col-sm-3 col-form-label">Address Line1</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="caddressLine1" placeholder="Address Line1">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="addressLine2" class="col-sm-3 col-form-label">Address Line2</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="addressLine2" placeholder="Address Line2">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="city" class="col-sm-3 col-form-label">City</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="city" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="postalCode" class="col-sm-3 col-form-label">Postal Code</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="postalCode" placeholder="Postal Code">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="country" class="col-sm-3 col-form-label">Country</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="country" placeholder="Country">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="profession" class="col-sm-3 col-form-label">Profession</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="profession" placeholder="Profession">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="hishestAcademic" class="col-sm-3 col-form-label">Highest Academic</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="highestAcademic" placeholder="Highest Academic">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="image" class="col-sm-3 col-form-label">Image</label>
+                                <div class="col-sm-9">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="image">
+                                        <label class="custom-file-label" for="image"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Create</button>
+                            <button type="submit" class="btn btn-default float-right">Cancel</button>
+                        </div>
+                        <!-- /.card-footer -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
