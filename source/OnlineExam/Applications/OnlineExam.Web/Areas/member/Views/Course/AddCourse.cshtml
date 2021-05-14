@@ -2,7 +2,123 @@
 @{
     ViewData["Title"] = "AddCourse";
 }
-<div class="container">
-    <h1>AddCourse</h1>
-</div>
+@section styles{
+    <link rel="stylesheet" href="/member/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="/member/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Course</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-controller="Course" asp-action="Index">Course</a></li>
+                    <li class="breadcrumb-item active">Add Course</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
 
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-10">
+                <!-- general form elements -->
+                <!-- Horizontal Form -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Add New Course</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form class="form-horizontal">
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label for="organization" class="col-sm-3 col-form-label">Organization</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control">
+                                        <option>Select</option>
+                                        <option>option 1</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="name" class="col-sm-3 col-form-label">Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="name" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="code" class="col-sm-3 col-form-label">Code</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="code" placeholder="Code">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="courseDuration" class="col-sm-3 col-form-label">Course Duration (hrs)</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="courseDuration" placeholder="Course Duration">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="credit" class="col-sm-3 col-form-label">Credit</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="credit" placeholder="Credit">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="outline" class="col-sm-3 col-form-label">Outline</label>
+                                <div class="col-sm-9">
+                                    <textarea name="textarea" type="text" class="form-control" id="outline"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="tags" class="col-sm-3 col-form-label">Tags</label>
+                                <div class="select2-success col-sm-9 ">
+                                    <select class="select2" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-success" style="width: 100%;">
+                                        <option>Alabama</option>
+                                        <option>Alaska</option>
+                                        <option>California</option>
+                                        <option>Delaware</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Create</button>
+                            <button type="submit" class="btn btn-default float-right">Cancel</button>
+                        </div>
+                        <!-- /.card-footer -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+@section scripts{
+    <script src="https://cdn.tiny.cloud/1/nw1hlo3uo111mlrt0795i0dz4gfr53jjvdbn4gthatqtz3b3/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="/member/plugins/select2/js/select2.full.min.js"></script>
+    <script>
+        tinymce.init({ selector: 'textarea' });
+        $(function () {
+            $('.select2').select2()
+        })
+    </script>
+}
+<!-- /.content -->
