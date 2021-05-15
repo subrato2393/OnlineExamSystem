@@ -17,5 +17,9 @@ namespace OnlineExam.Web.Areas.member.Controllers
         {
             return View();
         }
+        public IActionResult EditCourse()
+        {
+            return View();
+        }
     }
 }

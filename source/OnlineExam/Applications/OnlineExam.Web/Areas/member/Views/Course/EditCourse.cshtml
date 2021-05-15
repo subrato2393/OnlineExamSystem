@@ -1,0 +1,243 @@
+﻿
+@{
+    ViewData["Title"] = "EditCourse";
+}
+@section styles{
+    <link rel="stylesheet" href="/member/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="/member/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+}
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Course</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-controller="Course" asp-action="Index">Course</a></li>
+                    <li class="breadcrumb-item active">Edit Course</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<section class="content">
+    <div class="container-fluid">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Course Information
+                </h3>
+            </div>
+            <div class="card-body">
+                <h4>Course Name</h4>
+                <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="custom-content-above-basicinfo-tab" data-toggle="pill" href="#custom-content-above-basicinfo" role="tab" aria-controls="custom-content-above-basicinfo" aria-selected="true">Basic Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="custom-content-above-assigntrainers-tab" data-toggle="pill" href="#custom-content-above-assigntrainers" role="tab" aria-controls="custom-content-above-assigntrainers" aria-selected="false">Assign Trainers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="custom-content-above-createexams-tab" data-toggle="pill" href="#custom-content-above-createexams" role="tab" aria-controls="custom-content-above-createexams" aria-selected="false">Create Exams</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="custom-content-above-tabContent">
+                    <div class="tab-pane fade show active" id="custom-content-above-basicinfo" role="tabpanel" aria-labelledby="custom-content-above-basicinfo-tab">
+                        <form class="form-horizontal">
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label for="organization" class="col-sm-3 col-form-label">Organization</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control">
+                                            <option>Select</option>
+                                            <option>option 1</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                            <option>option 4</option>
+                                            <option>option 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="name" class="col-sm-3 col-form-label">Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="name" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="code" class="col-sm-3 col-form-label">Code</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="code" placeholder="Code">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="courseDuration" class="col-sm-3 col-form-label">Course Duration (hrs)</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="courseDuration" placeholder="Course Duration">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="credit" class="col-sm-3 col-form-label">Credit</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="credit" placeholder="Credit">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="outline" class="col-sm-3 col-form-label">Outline</label>
+                                    <div class="col-sm-9">
+                                        <textarea name="textarea" type="text" class="form-control" id="outline"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="tags" class="col-sm-3 col-form-label">Tags</label>
+                                    <div class="select2-success col-sm-9 ">
+                                        <select class="select2" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-success" style="width: 100%;">
+                                            <option>Alabama</option>
+                                            <option>Alaska</option>
+                                            <option>California</option>
+                                            <option>Delaware</option>
+                                            <option>Tennessee</option>
+                                            <option>Texas</option>
+                                            <option>Washington</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-success">Update</button>
+                                <button type="submit" class="btn btn-default float-right">Cancel</button>
+                            </div>
+                            <!-- /.card-footer -->
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="custom-content-above-assigntrainers" role="tabpanel" aria-labelledby="custom-content-above-assigntrainers-tab">
+                        <form class="form-horizontal">
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label for="organization" class="col-sm-2 col-form-label">Trainer</label>
+                                    <div class="col-sm-6">
+                                        <select class="form-control">
+                                            <option>Select</option>
+                                            <option>option 1</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                            <option>option 4</option>
+                                            <option>option 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="submit" class="btn btn-success rounded-circle">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="submit" class="btn btn-success">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            @*<div class="card-footer">
+                                <button type="submit" class="btn btn-success">Add</button>
+                            </div>*@
+                            <!-- /.card-footer -->
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="custom-content-above-createexams" role="tabpanel" aria-labelledby="custom-content-above-createexams-tab">
+                        <form class="form-horizontal">
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label for="organization" class="col-sm-3 col-form-label">Organization</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control">
+                                            <option>Select</option>
+                                            <option>option 1</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                            <option>option 4</option>
+                                            <option>option 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="course" class="col-sm-3 col-form-label">Course</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control">
+                                            <option>Select</option>
+                                            <option>option 1</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                            <option>option 4</option>
+                                            <option>option 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="examType" class="col-sm-3 col-form-label">Exam Type</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control">
+                                            <option>Select</option>
+                                            <option>option 1</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                            <option>option 4</option>
+                                            <option>option 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="code" class="col-sm-3 col-form-label">Code</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="code" placeholder="Code">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="topic" class="col-sm-3 col-form-label">Topic</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="topic" placeholder="Topic">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="fullMarks" class="col-sm-3 col-form-label">Full Marks</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="fullMarks" placeholder="Full Marks">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="duration" class="col-sm-3 col-form-label">Duration</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" placeholder="HH : MM" class="form-control">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <small>Please enter Hour and Minute</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-success">Create</button>
+                                <button type="submit" class="btn btn-default float-right">Cancel</button>
+                            </div>
+                            <!-- /.card-footer -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /.card -->
+        </div>
+
+    </div>
+</section>
+
+@section scripts{
+    <script src="https://cdn.tiny.cloud/1/nw1hlo3uo111mlrt0795i0dz4gfr53jjvdbn4gthatqtz3b3/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="/member/plugins/select2/js/select2.full.min.js"></script>
+    <script>
+        tinymce.init({ selector: 'textarea' });
+        $(function () {
+            $('.select2').select2()
+        })
+    </script>
+}
