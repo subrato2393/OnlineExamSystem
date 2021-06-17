@@ -1,7 +1,8 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "SearchCourse";
 }
+
 @section styles{
     <link rel="stylesheet" href="/member/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
 }
@@ -10,12 +11,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <a asp-controller="Organization" asp-action="AddOrganization" asp-area="member" class="btn btn-success text-white"><i class="fa fa-plus text-white mr-2"></i>Add</a>
+                    <a asp-controller="Course" asp-action="AddCourse" asp-area="member" class="btn btn-success text-white"><i class="fa fa-plus text-white mr-2"></i>Add</a>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Organization" asp-area="Member">Organization</a></li>
-                        <li class="breadcrumb-item active">Organization List</li>
+                        <li class="breadcrumb-item"><a asp-action="SearchCourse" asp-controller="Course" asp-area="Member">Course</a></li>
+                        <li class="breadcrumb-item active">Course List</li>
                     </ol>
                 </div>
             </div>
@@ -26,11 +27,11 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Organization List</h3>
+                        <h3 class="card-title">Course List</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table id="tblOrganization" class="table table-bordered table-striped">
+                        <table id="tblCourse" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>Name</th>
@@ -406,7 +407,7 @@
     <script src="/member/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
     <script>
         $(function () {
-            $('#tblOrganization').DataTable({
+            $('#tblCourse').DataTable({
                 "paging": true,
                 "lengthChange": true,
                 "searching": true,
@@ -417,4 +418,5 @@
         });
     </script>
 }
+
 
