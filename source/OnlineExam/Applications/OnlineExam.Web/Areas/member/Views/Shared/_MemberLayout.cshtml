@@ -247,6 +247,12 @@
                                         <p>Course Search</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a asp-action="AssignTrainers" asp-controller="Course" asp-area="Member" class="nav-link">
+                                        <i class="fas fa-search nav-icon"></i>
+                                        <p>Assign Trainers</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item has-treeview">
@@ -262,6 +268,18 @@
                                     <a asp-controller="Batch" asp-action="AddBatch" class="nav-link">
                                         <i class="fas fa-plus nav-icon"></i>
                                         <p>Add Batch</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-action="AssignTrainers" asp-controller="Batch" asp-area="Member" class="nav-link">
+                                        <i class="fas fa-search nav-icon"></i>
+                                        <p>Assign Trainers</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-action="AssignParticipents" asp-controller="Participent" asp-area="Member" class="nav-link">
+                                        <i class="fas fa-search nav-icon"></i>
+                                        <p>Assign Participents</p>
                                     </a>
                                 </li>
                             </ul>

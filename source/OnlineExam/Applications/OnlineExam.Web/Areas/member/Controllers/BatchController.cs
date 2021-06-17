@@ -13,11 +13,18 @@ namespace OnlineExam.Web.Areas.member.Controllers
         {
             return View();
         } 
+
         public IActionResult AddBatch()
         {
             return View();
         }
+
         public IActionResult EditBatch()
+        {
+            return View();
+        }
+
+        public IActionResult AssignTrainers()
         {
             return View();
         }

@@ -13,15 +13,23 @@ namespace OnlineExam.Web.Areas.member.Controllers
         {
             return View();
         }
+
         public IActionResult AddCourse() 
         {
             return View();
         }
+
         public IActionResult EditCourse()
         {
             return View();
         }
+
         public IActionResult SearchCourse() 
+        {
+            return View();
+        }
+
+        public IActionResult AssignTrainers() 
         {
             return View();
         }
