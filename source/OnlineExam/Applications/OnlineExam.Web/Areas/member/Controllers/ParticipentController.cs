@@ -13,9 +13,16 @@ namespace OnlineExam.Web.Areas.member.Controllers
         {
             return View();
         }
+
         public IActionResult AddParticipent()
         {
             return View();
         }
+
+        public IActionResult AssignParticipents() 
+        {
+            return View();
+        }
+
     }
 }
