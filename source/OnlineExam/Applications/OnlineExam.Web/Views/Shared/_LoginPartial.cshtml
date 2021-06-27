@@ -15,6 +15,12 @@
 }
 else
 {
-    <li><a asp-action="SignUp" asp-controller="Account"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-    <li><a asp-action="Login" asp-controller="Account"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    @*<li><a asp-action="SignUp" asp-controller="Account"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a asp-action="Login" asp-controller="Account"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>*@
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
 }
