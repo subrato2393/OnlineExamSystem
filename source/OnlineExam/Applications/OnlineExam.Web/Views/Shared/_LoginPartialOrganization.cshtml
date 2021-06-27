@@ -1,6 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@using OnlineExam.Web.Entities
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
 @if (SignInManager.IsSignedIn(User))
 {
@@ -15,12 +16,12 @@
 }
 else
 {
-    @*<li><a asp-action="OrganizationSignUp" asp-controller="Account"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a asp-action="OrganizationLogin" asp-controller="Account"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>*@
-    <li>
+    <li><a asp-action="OrganizationSignUp" asp-controller="Account"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a asp-action="OrganizationLogin" asp-controller="Account"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    @*<li>
         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
     </li>
     <li>
         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
+    </li>*@
 }

@@ -1,12 +1,7 @@
-﻿
+﻿@model RegisterModel
 @{
     ViewData["Title"] = "OrganizationSignUp";
     Layout = "~/Views/Shared/_OrganizationLayout.cshtml";
-}
-
-
-@{
-    ViewData["Title"] = "SignUp";
 }
 @section styles{
     <link rel="stylesheet" href="/loginpage/fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -18,22 +13,39 @@
     <div class="signup-content">
         <div class="signup-form">
             <h2 class="form-title">Sign up</h2>
-            <form method="POST" class="register-form" id="register-form">
+            <form asp-route-returnUrl="@Model.ReturnUrl" method="POST" class="register-form" id="register-form">
+                <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group">
-                    <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                    <input type="text" name="name" id="name" placeholder="Your Name" />
+                    <label asp-for="Name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                    <input type="text" asp-for="Name" placeholder="Name" />
                 </div>
                 <div class="form-group">
-                    <label for="email"><i class="zmdi zmdi-email"></i></label>
-                    <input type="email" name="email" id="email" placeholder="Your Email" />
+                    <label asp-for="Address"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                    <input type="text" asp-for="Address" placeholder="Address" />
                 </div>
                 <div class="form-group">
-                    <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                    <input type="password" name="pass" id="pass" placeholder="Password" />
+                    <label asp-for="Code"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                    <input type="text" asp-for="Code" placeholder="Code" />
                 </div>
                 <div class="form-group">
-                    <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                    <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
+                    <label asp-for="About"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                    <input type="text" asp-for="About" placeholder="About" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="PostalCode"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                    <input type="text" asp-for="PostalCode" placeholder="Postal Code" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email"><i class="zmdi zmdi-email"></i></label>
+                    <input type="email" asp-for="Email" placeholder="Your Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"><i class="zmdi zmdi-lock"></i></label>
+                    <input type="password" asp-for="Password" placeholder="Password" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword"><i class="zmdi zmdi-lock-outline"></i></label>
+                    <input type="password" asp-for="ConfirmPassword" placeholder="Repeat your password" />
                 </div>
                 <div class="form-group">
                     <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
@@ -54,6 +66,62 @@
     <script src="/loginpage/vendor/jquery/jquery.min.js"></script>
     <script src="/loginpage/js/main.js"></script>
 }
+@*<div class="row">
+    <div class="col-md-4">*@
+        @*<form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h4>Create a new account.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>*@
+    @*</div>*@
+    @*<div class="col-md-6 col-md-offset-2">
+        <section>
+            <h4>Use another service to register.</h4>
+            <hr />
+            @{
+                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                {
+                    <div>
+                        <p>
+                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                            for details on setting up this ASP.NET application to support logging in via external services.
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                        <div>
+                            <p>
+                                @foreach (var provider in Model.ExternalLogins)
+                                {
+                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                }
+                            </p>
+                        </div>
+                    </form>
+                }
+            }
+        </section>
+    </div>*@
+@*</div>*@
+
 
 
 
