@@ -19,6 +19,16 @@ namespace OnlineExam.Web.Controllers
             return View();
         }
 
+        public IActionResult Organization()
+        {
+            return View();
+        }
+
+        public IActionResult Student() 
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

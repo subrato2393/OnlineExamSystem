@@ -18,5 +18,17 @@ namespace OnlineExam.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult OrganizationLogin()
+        {
+            return View();
+        } 
+
+        public IActionResult OrganizationSignUp()
+        {
+            return View();
+        }
+
+
     }
 }
