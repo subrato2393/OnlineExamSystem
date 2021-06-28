@@ -178,5 +178,10 @@ namespace OnlineExam.Web.Controllers
             }
         }
 
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
     }
 }
