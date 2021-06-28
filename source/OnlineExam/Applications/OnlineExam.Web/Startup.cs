@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OnlineExam.Web.Contexts;
 using OnlineExam.Web.Entities;
+using OnlineExam.Web.Services;
 
 namespace OnlineExam.Web
 {
@@ -28,7 +29,9 @@ namespace OnlineExam.Web
                     Configuration.GetConnectionString("DefaultConnection")));
 
             //Identity authentication
-             services.AddIdentity<ApplicationUser, Role>()
+            services.AddIdentity<ApplicationUser, Role>()
+            .AddUserManager<UserManager>()
+            .AddSignInManager<SignInManager>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultUI()
             .AddDefaultTokenProviders();
