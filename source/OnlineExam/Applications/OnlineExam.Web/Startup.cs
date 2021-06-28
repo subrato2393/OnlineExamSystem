@@ -31,8 +31,15 @@ namespace OnlineExam.Web
             .AddDefaultUI()
             .AddDefaultTokenProviders();
 
-            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("OrganizationAccess", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireClaim("Organization");
+                });
+            });
 
             services.AddControllersWithViews();
             services.AddRazorPages();
