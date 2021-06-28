@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using OnlineExam.Web.Entities;
 using OnlineExam.Web.Models;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
@@ -77,7 +78,6 @@ namespace OnlineExam.Web.Controllers
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User logged in.");
                     return RedirectToAction("Index", "Home", new { Area = "member" });
                     //return LocalRedirect(returnUrl);
                 }
@@ -129,8 +129,10 @@ namespace OnlineExam.Web.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User created a new account with password.");
-                    return RedirectToAction("Index", "Home", new { Area = "member" });
+                    var claim = new Claim("Organization", "True");
+                    await _userManager.AddClaimAsync(user, claim);
+
+                    return RedirectToAction("OrganizationLogin", "Account", new { Area = ""});
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
