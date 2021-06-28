@@ -162,5 +162,19 @@ namespace OnlineExam.Web.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
+
+        public async Task<IActionResult> Logout(string returnUrl = null) 
+        {
+            await _signInManager.SignOutAsync();
+            if (returnUrl != null)
+            {
+                return LocalRedirect(returnUrl);
+            }
+            else
+            {
+                return RedirectToAction("Index","Home");
+            }
+        }
+
     }
 }
