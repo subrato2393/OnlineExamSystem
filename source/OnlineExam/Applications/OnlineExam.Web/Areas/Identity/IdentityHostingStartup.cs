@@ -5,8 +5,6 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OnlineExam.Web.Contexts;
-using OnlineExam.Web.Entities;
 
 [assembly: HostingStartup(typeof(OnlineExam.Web.Areas.Identity.IdentityHostingStartup))]
 namespace OnlineExam.Web.Areas.Identity

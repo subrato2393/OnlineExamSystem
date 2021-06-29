@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using OnlineExam.Web.Entities;
+using OnlineExam.Membership.Entities;
 using System;
 using System.Collections.Generic;
 

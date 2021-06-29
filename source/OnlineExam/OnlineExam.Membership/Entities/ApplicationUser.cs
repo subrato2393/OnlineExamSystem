@@ -2,7 +2,7 @@
 using System;
 
 
-namespace OnlineExam.Web.Entities
+namespace OnlineExam.Membership.Entities
 {
     public class ApplicationUser : IdentityUser<Guid>
     {

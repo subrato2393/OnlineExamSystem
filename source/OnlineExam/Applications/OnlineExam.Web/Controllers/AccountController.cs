@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-using OnlineExam.Web.Entities;
+using OnlineExam.Membership.Entities;
 using OnlineExam.Web.Models;
 using System.Linq;
 using System.Security.Claims;

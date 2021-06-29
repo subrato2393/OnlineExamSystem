@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using OnlineExam.Web.Entities;
+using OnlineExam.Membership.Entities;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace OnlineExam.Web.Contexts
+
+namespace OnlineExam.Membership.Contexts
 {
     public class ApplicationDbContext : IdentityDbContext
         <ApplicationUser,Role,Guid,UserClaim,UserRole,UserLogin,RoleClaim,UserToken>

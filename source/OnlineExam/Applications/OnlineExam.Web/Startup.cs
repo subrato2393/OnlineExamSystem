@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using OnlineExam.Web.Contexts;
-using OnlineExam.Web.Entities;
+using OnlineExam.Membership.Contexts;
+using OnlineExam.Membership.Entities;
 using OnlineExam.Web.Services;
 
 namespace OnlineExam.Web
