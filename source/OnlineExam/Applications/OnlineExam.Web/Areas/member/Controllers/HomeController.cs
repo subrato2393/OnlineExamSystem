@@ -1,14 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace OnlineExam.Web.Areas.member.Controllers
 {
+    [Area("member")]
+    [Authorize(Policy = "OrganizationAccess")]
     public class HomeController : Controller
     {
-        [Area("member")]
+        public HomeController()
+        {
+
+        }
+
         public IActionResult Index()
         {
             return View();

@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace OnlineExam.Web.Areas.member.Controllers
 {
     [Area("member")]
+    [Authorize(Policy = "OrganizationAccess")]
     public class CourseController : Controller
     {
         public IActionResult Index()

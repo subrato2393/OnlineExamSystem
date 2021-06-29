@@ -1,17 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using OnlineExam.Web.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using OnlineExam.Membership.Contexts;
+using OnlineExam.Membership.Entities;
+using OnlineExam.Web.Services;
 
 namespace OnlineExam.Web
 {
@@ -30,8 +27,32 @@ namespace OnlineExam.Web
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            //Identity authentication
+            services.AddIdentity<ApplicationUser, Role>()
+            .AddUserManager<UserManager>()
+            .AddSignInManager<SignInManager>()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultUI()
+            .AddDefaultTokenProviders();
+
+            //Configure cookie and return url path
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.AccessDeniedPath = new PathString("/Account/AccessDenied");
+                options.LoginPath = new PathString("/Account/OrganizationLogin");
+            });
+
+            //Authorization
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("OrganizationAccess", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireClaim("Organization");
+                });
+            });
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
