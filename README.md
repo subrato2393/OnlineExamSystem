@@ -4,7 +4,7 @@ Online Examination System
 Online Examination System,Which is fully education based project,In modern world online education course is a very popular system to all over the world. Any kind of educational organization could able to registed of our site, They can have to take all the educational activities with this site, as well as it also helpful for student,who want to take any course through the online,It also has same speacial advantage,Students can see the trainer's history,review and as well as course rating.There are three of four kind of exams in all course,student should be attend to all these exams,And exams taken with MCQ system.
 ### Technology Used
 ```
-C#,ASP.NET MVC,Code-first migration,Entity Framework,MS SQL Server 2012,HTML5,CSS3,JavaScript,JQuery
+C#,ASP.NET Core MVC,Entity Framework Core,MSSQL Server, HTML5, CSS3, jQuery, Ajax
 ```
 ### [Project Mockups]
 #### [01- Organization Entry]
@@ -37,30 +37,3 @@ C#,ASP.NET MVC,Code-first migration,Entity Framework,MS SQL Server 2012,HTML5,CS
 ![14 exam attend](https://user-images.githubusercontent.com/24517327/49200985-3cdea380-f3c9-11e8-95c4-05e71f24a8ea.png)
 #### [15- Exam Result]
 ![15 exam result](https://user-images.githubusercontent.com/24517327/49200989-3f40fd80-f3c9-11e8-92b2-3bfaf0cd8f63.png)
-
-### What we have done so far
-## [Organization]
-* Organization SignUp
-* Organization Index- CRUD (create,edit,update,delete,view)
-* Organization Search
-* Validation
-## [Course]
-* Entry Course
-* Course Index- CRUD (create,edit,update,delete,view)
-
-## [Trainer]
-* Create Trainer
-* Assign Trainer to the course
-* Trainer Index- CRUD (create,edit,update,delete,view)
-* Assign Lead Trainer
-## [Exam]
-* Create Exam
-## [Batch]
-* Create Batch
-## [Participant]
-* Create Participant
-
-
-
-### Doing
-### TO-DO
