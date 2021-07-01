@@ -4,7 +4,7 @@ Online Examination System
 Online Examination System,Which is fully education based project,In modern world online education course is a very popular system to all over the world. Any kind of educational organization could able to registed of our site, They can have to take all the educational activities with this site, as well as it also helpful for student,who want to take any course through the online,It also has same speacial advantage,Students can see the trainer's history,review and as well as course rating.There are three of four kind of exams in all course,student should be attend to all these exams,And exams taken with MCQ system.
 ### Technology Used
 ```
-C#,ASP.NET Core MVC,Entity Framework Core,MSSQL Server, HTML5, CSS3, jQuery, Ajax
+C#,ASP.NET Core MVC, Autofac IoC Container, Repository and UnitOfWork Design Pattern,Unit Test,Error Logger, Serilog,ASP.NET Core Identity, NUnit, Entity Framework Core,MSSQL Server, HTML5, CSS3, jQuery, Ajax, Booststrap
 ```
 ### [Project Mockups]
 #### [01- Organization Entry]
