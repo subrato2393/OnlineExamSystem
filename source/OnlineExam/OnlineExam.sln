@@ -11,7 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AB85EAD6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineExam.Web", "Applications\OnlineExam.Web\OnlineExam.Web.csproj", "{ED317887-8E42-4835-B465-A812A476DE06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineExam.Membership", "OnlineExam.Membership\OnlineExam.Membership.csproj", "{93B414BB-615A-40CE-81E8-B1F92CC9B256}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineExam.Membership", "OnlineExam.Membership\OnlineExam.Membership.csproj", "{93B414BB-615A-40CE-81E8-B1F92CC9B256}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineExam.Organization", "OnlineExam.Organization\OnlineExam.Organization.csproj", "{53C0AB76-3D0C-4734-80A4-46E20B07B811}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{93B414BB-615A-40CE-81E8-B1F92CC9B256}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93B414BB-615A-40CE-81E8-B1F92CC9B256}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93B414BB-615A-40CE-81E8-B1F92CC9B256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53C0AB76-3D0C-4734-80A4-46E20B07B811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C0AB76-3D0C-4734-80A4-46E20B07B811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C0AB76-3D0C-4734-80A4-46E20B07B811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C0AB76-3D0C-4734-80A4-46E20B07B811}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{ED317887-8E42-4835-B465-A812A476DE06} = {7A7B8038-4D24-48CD-8D77-C23DC655B82A}
 		{93B414BB-615A-40CE-81E8-B1F92CC9B256} = {1587720B-BDD0-44C3-8C66-9A75D4E5ACDC}
+		{53C0AB76-3D0C-4734-80A4-46E20B07B811} = {1587720B-BDD0-44C3-8C66-9A75D4E5ACDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1DAC5DF-336C-4A7A-8A6E-EE6503C14947}

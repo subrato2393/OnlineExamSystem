@@ -1,3 +1,5 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -8,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OnlineExam.Membership.Contexts;
 using OnlineExam.Membership.Entities;
+using OnlineExam.Organization;
 using OnlineExam.Web.Services;
 
 namespace OnlineExam.Web
@@ -20,6 +23,8 @@ namespace OnlineExam.Web
         }
 
         public IConfiguration Configuration { get; }
+
+        public static ILifetimeScope AutofacContainer { get; private set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -57,9 +62,17 @@ namespace OnlineExam.Web
             services.AddRazorPages();
         }
 
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterModule(new WebModule());
+            builder.RegisterModule(new OrganizationModule());
+        }
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            AutofacContainer = app.ApplicationServices.GetAutofacRoot();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

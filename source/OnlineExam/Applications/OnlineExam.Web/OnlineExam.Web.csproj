@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.12" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.15" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.15" />
@@ -35,6 +36,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\OnlineExam.Membership\OnlineExam.Membership.csproj" />
+    <ProjectReference Include="..\..\OnlineExam.Organization\OnlineExam.Organization.csproj" />
   </ItemGroup>
 
 </Project>
