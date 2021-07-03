@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using OnlineExam.Organization;
 using OnlineExam.Web.Models;
+using System;
 using System.Diagnostics;
 
 namespace OnlineExam.Web.Controllers
@@ -18,6 +19,16 @@ namespace OnlineExam.Web.Controllers
 
         public IActionResult Index()
         {
+            try
+            {
+                var model = new TestModel();
+                model.Test();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Invalid operation");
+            }
+          
             return View();
         }
 
