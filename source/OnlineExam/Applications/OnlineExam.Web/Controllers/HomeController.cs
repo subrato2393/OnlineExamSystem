@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using OnlineExam.Organization;
 using OnlineExam.Web.Models;
 using System.Diagnostics;
 
@@ -8,6 +9,7 @@ namespace OnlineExam.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        
 
         public HomeController(ILogger<HomeController> logger)
         {
