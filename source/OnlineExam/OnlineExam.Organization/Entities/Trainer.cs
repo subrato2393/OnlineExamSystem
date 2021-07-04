@@ -17,5 +17,6 @@ namespace OnlineExam.Organization.Entities
         public string PostalCode { get; set; }
         public string Country { get; set; }
         public byte[] Image { get; set; }
+        public List<CourseAssign> CourseAssigns { get; set; }
     }
 }

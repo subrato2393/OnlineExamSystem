@@ -8,6 +8,8 @@ namespace OnlineExam.Organization.Entities
     {
         public Guid Id { get; set; }
         public Guid CourseId { get; set; }
-        public Guid TagId { get; set; } 
+        public Course Course { get; set; }
+        public Guid TagId { get; set; }
+        public Tag Tag { get; set; } 
     }
 }
