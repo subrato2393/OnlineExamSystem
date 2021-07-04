@@ -8,4 +8,12 @@
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="BusinessObjects\" />
+    <Folder Include="Contexts\" />
+    <Folder Include="Services\" />
+    <Folder Include="UnitOfWorks\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>
