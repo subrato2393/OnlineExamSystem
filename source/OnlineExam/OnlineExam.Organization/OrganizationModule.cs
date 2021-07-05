@@ -1,5 +1,8 @@
 ﻿using Autofac;
 using OnlineExam.Organization.Contexts;
+using OnlineExam.Organization.Repositories;
+using OnlineExam.Organization.Services;
+using OnlineExam.Organization.UnitOfWorks;
 
 namespace OnlineExam.Organization
 {
@@ -19,6 +22,15 @@ namespace OnlineExam.Organization
             builder.RegisterType<OrganizationDbContext>()
                 .WithParameter("connectionString", _connectionString)
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<CourseRepository>().As<ICourseRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<CourseService>().As<ICourseService>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<CourseUnitOfWork>().As<ICourseUnitOfWork>()
                 .InstancePerLifetimeScope();
 
             base.Load(builder);

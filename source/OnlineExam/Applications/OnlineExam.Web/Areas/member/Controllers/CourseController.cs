@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using OnlineExam.Organization.Contexts;
-using OnlineExam.Organization.Entities;
+using OnlineExam.Web.Areas.member.Models;
 
 namespace OnlineExam.Web.Areas.member.Controllers
 {
@@ -9,11 +8,6 @@ namespace OnlineExam.Web.Areas.member.Controllers
     [Authorize(Policy = "OrganizationAccess")]
     public class CourseController : Controller
     {
-        private readonly OrganizationDbContext _context;
-        public CourseController(OrganizationDbContext context)
-        {
-            _context = context;
-        }
         public IActionResult Index()
         {
             return View();
@@ -25,10 +19,9 @@ namespace OnlineExam.Web.Areas.member.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddCourse(Course course)
+        public IActionResult AddCourse(CourseModel model)
         {
-            _context.Courses.Add(course);
-            _context.SaveChanges();
+            model.AddCourseInformation();
             return View();
         }
 

@@ -11,10 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BusinessObjects\" />
-    <Folder Include="Services\" />
-    <Folder Include="UnitOfWorks\" />
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\OnlineExam.DataAccessLayar\OnlineExam.DataAccessLayar.csproj" />
   </ItemGroup>
 
 </Project>
