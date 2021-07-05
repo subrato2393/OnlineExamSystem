@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using OnlineExam.Membership.Contexts;
 using OnlineExam.Membership.Entities;
 using OnlineExam.Organization;
+using OnlineExam.Organization.Contexts;
 using OnlineExam.Web.Services;
 
 namespace OnlineExam.Web
@@ -29,9 +30,16 @@ namespace OnlineExam.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string connectionString = Configuration.GetConnectionString("DefaultConnection");
+            string migrationAssemblyName = typeof(Startup).Assembly.FullName;
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<OrganizationDbContext>(options =>
+               options.UseSqlServer(connectionString,
+               options =>options.MigrationsAssembly(migrationAssemblyName)));
 
             //Identity authentication
             services.AddIdentity<ApplicationUser, Role>()
@@ -64,8 +72,11 @@ namespace OnlineExam.Web
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
+            string connectionString = Configuration.GetConnectionString("DefaultConnection");
+            string migrationAssemblyName = typeof(Startup).Assembly.FullName;
+
             builder.RegisterModule(new WebModule());
-            builder.RegisterModule(new OrganizationModule());
+            builder.RegisterModule(new OrganizationModule(connectionString,migrationAssemblyName));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
