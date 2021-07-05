@@ -5,7 +5,7 @@ using OnlineExam.Membership.Entities;
 using System;
 using System.Collections.Generic;
 
-namespace OnlineExam.Web.Services
+namespace OnlineExam.Membership
 {
     public class UserManager : UserManager<ApplicationUser>
     {

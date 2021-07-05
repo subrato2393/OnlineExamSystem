@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using OnlineExam.Membership.Entities;
 
-namespace OnlineExam.Web.Services
+namespace OnlineExam.Membership
 {
     public class SignInManager : SignInManager<ApplicationUser>
     {

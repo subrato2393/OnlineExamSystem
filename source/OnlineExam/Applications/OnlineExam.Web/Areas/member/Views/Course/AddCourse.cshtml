@@ -40,46 +40,33 @@
                     <form class="form-horizontal" method="post" asp-controller="Course" asp-action="AddCourse">
                         <div class="card-body">
                             <div class="form-group row">
-                                <label for="organization" class="col-sm-3 col-form-label">Organization</label>
-                                <div class="col-sm-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>option 1</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
-                                        <option>option 5</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
                                 <label asp-for="Name" class="col-sm-3 col-form-label">Name</label>
                                 <div class="col-sm-9">
                                     <input asp-for="Name" type="text" class="form-control" id="name" placeholder="Name">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="code" class="col-sm-3 col-form-label">Code</label>
+                                <label asp-for="Code" class="col-sm-3 col-form-label">Code</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="code" placeholder="Code">
+                                    <input asp-for="Code" type="text" class="form-control" id="code" placeholder="Code">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="courseDuration" class="col-sm-3 col-form-label">Course Duration (hrs)</label>
+                                <label asp-for="CourseDuration" class="col-sm-3 col-form-label">Course Duration (hrs)</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="courseDuration" placeholder="Course Duration">
+                                    <input asp-for="CourseDuration" type="text" class="form-control" id="courseDuration" placeholder="Course Duration">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="credit" class="col-sm-3 col-form-label">Credit</label>
+                                <label asp-for="Credit" class="col-sm-3 col-form-label">Credit</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="credit" placeholder="Credit">
+                                    <input asp-for="Credit" type="text" class="form-control" id="credit" placeholder="Credit">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="outline" class="col-sm-3 col-form-label">Outline</label>
+                                <label asp-for="Outline" class="col-sm-3 col-form-label">Outline</label>
                                 <div class="col-sm-9">
-                                    <textarea name="textarea" type="text" class="form-control" id="outline"></textarea>
+                                    <textarea asp-for="Outline" type="text" class="form-control" id="outline"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">

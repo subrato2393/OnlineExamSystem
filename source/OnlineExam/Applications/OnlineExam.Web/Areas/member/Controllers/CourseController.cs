@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OnlineExam.Web.Areas.member.Models;
+using System.Threading.Tasks;
 
 namespace OnlineExam.Web.Areas.member.Controllers
 {
@@ -19,9 +20,9 @@ namespace OnlineExam.Web.Areas.member.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddCourse(CourseModel model)
+        public async Task <IActionResult> AddCourse(CourseModel model)
         {
-            model.AddCourseInformation();
+            await model.AddCourseInformation(User.Identity.Name);
             return View();
         }
 
