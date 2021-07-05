@@ -32,6 +32,7 @@ namespace OnlineExam.Web.Controllers
             _logger = logger;
             _emailSender = emailSender;
         }
+
         public IActionResult Index()
         {
             return View();

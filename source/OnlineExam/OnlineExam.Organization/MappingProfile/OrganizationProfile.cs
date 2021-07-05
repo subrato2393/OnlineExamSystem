@@ -1,6 +1,4 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
 using EO = OnlineExam.Organization.Entities;
 using BO = OnlineExam.Organization.BusinessObjects;
 

@@ -10,7 +10,6 @@ namespace OnlineExam.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -19,16 +18,6 @@ namespace OnlineExam.Web.Controllers
 
         public IActionResult Index()
         {
-            try
-            {
-                var model = new TestModel();
-                model.Test();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Invalid operation");
-            }
-          
             return View();
         }
 

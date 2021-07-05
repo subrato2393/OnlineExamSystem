@@ -22,13 +22,5 @@ namespace OnlineExam.Organization.Services
             _courseUnitOfWork.CourseRepository.Add(courseEntity);
             _courseUnitOfWork.Save();
         }
-
-        private CourseEO ConvertCourseBOToCourseEO(CourseBO courseBO)
-        {
-           return new CourseEO()
-            {
-                Name=courseBO.Name
-            };
-        }
     }
 }
