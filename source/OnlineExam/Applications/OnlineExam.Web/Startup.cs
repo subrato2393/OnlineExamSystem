@@ -13,6 +13,7 @@ using OnlineExam.Membership.Entities;
 using OnlineExam.Organization;
 using OnlineExam.Organization.Contexts;
 using OnlineExam.Web.Services;
+using System;
 
 namespace OnlineExam.Web
 {
@@ -66,6 +67,7 @@ namespace OnlineExam.Web
                 });
             });
 
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
