@@ -33,6 +33,7 @@
   <ItemGroup>
     <Folder Include="Areas\member\Data\" />
     <Folder Include="Areas\member\Models\" />
+    <Folder Include="Logs\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
