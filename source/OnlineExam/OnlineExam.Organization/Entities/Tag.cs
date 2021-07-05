@@ -1,10 +1,10 @@
-﻿using System;
+﻿using OnlineExam.DataAccessLayar;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace OnlineExam.Organization.Entities
 {
-    public class Tag
+    public class Tag : IEntity<Guid>
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

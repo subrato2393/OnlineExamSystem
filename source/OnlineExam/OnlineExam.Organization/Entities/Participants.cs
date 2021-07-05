@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using OnlineExam.DataAccessLayar;
+using System;
 
 namespace OnlineExam.Organization.Entities
 {
-    public class Participants
+    public class Participants : IEntity<Guid>
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }

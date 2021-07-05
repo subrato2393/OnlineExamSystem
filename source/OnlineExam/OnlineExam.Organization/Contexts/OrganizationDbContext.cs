@@ -3,12 +3,12 @@ using OnlineExam.Organization.Entities;
 
 namespace OnlineExam.Organization.Contexts
 {
-    public class OrganizationDbContext : DbContext
+    public class OrganizationDbContext : DbContext, IOrganizationDbContext
     {
         private readonly string _connectionString;
         private readonly string _migrationAssemblyName;
 
-        public OrganizationDbContext(string connectionString,string migrationAssemblyName)
+        public OrganizationDbContext(string connectionString, string migrationAssemblyName)
         {
             _connectionString = connectionString;
             _migrationAssemblyName = migrationAssemblyName;
@@ -17,7 +17,7 @@ namespace OnlineExam.Organization.Contexts
         {
             optionsBuilder.UseSqlServer(_connectionString,
                 optionsBuilder => optionsBuilder.MigrationsAssembly(_migrationAssemblyName));
-           
+
             base.OnConfiguring(optionsBuilder);
         }
         public DbSet<Batch> Batches { get; set; }
@@ -29,6 +29,6 @@ namespace OnlineExam.Organization.Contexts
         public DbSet<Participants> Participants { get; set; }
         public DbSet<QusAndAns> QusAndAns { get; set; }
         public DbSet<Tag> Tags { get; set; }
-        public DbSet<Trainer> Trainers { get; set; } 
+        public DbSet<Trainer> Trainers { get; set; }
     }
 }

@@ -11,7 +11,6 @@ namespace OnlineExam.Web.Areas.member.Controllers
         {
 
         }
-
         public IActionResult Index()
         {
             return View();
