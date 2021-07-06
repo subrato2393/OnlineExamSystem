@@ -14,15 +14,21 @@ namespace OnlineExam.Web.Areas.member.Controllers
             return View();
         }
 
-        public IActionResult AddCourse() 
+        public IActionResult AddCourse()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task <IActionResult> AddCourse(CourseModel model)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddCourse(CourseModel model)
         {
-            await model.AddCourseInformation(User.Identity.Name);
+            if (ModelState.IsValid)
+            {
+                await model.AddCourseInformation(User.Identity.Name);
+                return View();
+            }
+
             return View();
         }
 
@@ -31,12 +37,12 @@ namespace OnlineExam.Web.Areas.member.Controllers
             return View();
         }
 
-        public IActionResult SearchCourse() 
+        public IActionResult SearchCourse()
         {
             return View();
         }
 
-        public IActionResult AssignTrainers() 
+        public IActionResult AssignTrainers()
         {
             return View();
         }

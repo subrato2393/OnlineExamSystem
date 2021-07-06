@@ -9,8 +9,8 @@ namespace OnlineExam.Organization.BusinessObjects
         public Guid UserId { get; set; } 
         public string Name { get; set; }
         public string Code { get; set; }
-        public double CourseDuration { get; set; }
-        public double Credit { get; set; }
+        public double? CourseDuration { get; set; }
+        public double? Credit { get; set; }
         public string Outline { get; set; }
     }
 }

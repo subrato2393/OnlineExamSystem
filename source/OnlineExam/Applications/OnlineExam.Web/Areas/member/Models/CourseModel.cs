@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using OnlineExam.Membership;
 using OnlineExam.Organization.Services;
+using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using CourseBO = OnlineExam.Organization.BusinessObjects.Course;
 using CourseEO = OnlineExam.Organization.Entities.Course;
@@ -22,10 +23,25 @@ namespace OnlineExam.Web.Areas.member.Models
             _courseService = Startup.AutofacContainer.Resolve<ICourseService>();
             _userManager = Startup.AutofacContainer.Resolve<UserManager>();
         }
+
+        [Required]
+        [Display(Name ="Name")]
         public string Name { get; set; }
+
+        [Required]
+        [Display(Name = "Code")]
         public string Code { get; set; }
-        public double CourseDuration { get; set; }
-        public double Credit { get; set; }
+
+        [Required]
+        [Display(Name = "Course Duration")]
+        public double? CourseDuration { get; set; }
+
+        [Required]
+        [Display(Name = "Credit")]
+        public double? Credit { get; set; }
+
+        [Required]
+        [Display(Name = "Outline")]
         public string Outline { get; set; }
 
         public async Task AddCourseInformation(string userName)
