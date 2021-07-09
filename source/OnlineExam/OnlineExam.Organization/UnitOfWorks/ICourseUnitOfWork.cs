@@ -6,5 +6,7 @@ namespace OnlineExam.Organization.UnitOfWorks
     public interface ICourseUnitOfWork : IUnitOfWork
     {
         ICourseRepository CourseRepository { get; set; }
+        ITagRepository TagRepository { get; set; }
+        ICourseTagRepository CourseTagRepository { get; set; }
     }
 }

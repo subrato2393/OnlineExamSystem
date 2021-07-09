@@ -16,7 +16,10 @@ namespace OnlineExam.Web.Areas.member.Controllers
 
         public IActionResult AddCourse()
         {
-            return View();
+            var model = new CourseModel();
+            model.GetAllTags();
+
+            return View(model);
         }
 
         [HttpPost]
@@ -26,10 +29,13 @@ namespace OnlineExam.Web.Areas.member.Controllers
             if (ModelState.IsValid)
             {
                 await model.AddCourseInformation(User.Identity.Name);
-                return View();
+
+                model.GetAllTags();
+
+                return RedirectToAction("SearchCourse");
             }
 
-            return View();
+            return RedirectToAction("SearchCourse");
         }
 
         public IActionResult EditCourse()

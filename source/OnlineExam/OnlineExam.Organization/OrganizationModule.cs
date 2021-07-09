@@ -27,10 +27,16 @@ namespace OnlineExam.Organization
             builder.RegisterType<CourseRepository>().As<ICourseRepository>()
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<TagRepository>().As<ITagRepository>()
+                .InstancePerLifetimeScope();
+
             builder.RegisterType<CourseService>().As<ICourseService>()
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<CourseUnitOfWork>().As<ICourseUnitOfWork>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<CourseTagRepository>().As<ICourseTagRepository>()
                 .InstancePerLifetimeScope();
 
             base.Load(builder);

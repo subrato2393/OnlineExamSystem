@@ -9,6 +9,8 @@ namespace OnlineExam.Organization.MappingProfile
         public OrganizationProfile()
         {
             CreateMap<BO.Course, EO.Course>();
+            CreateMap<BO.CourseTag, EO.CourseTag>();
+            CreateMap<EO.Course, BO.Course>();
         }
     }
 }

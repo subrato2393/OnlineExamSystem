@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="BusinessObjects\" />
     <Folder Include="Enums\" />
   </ItemGroup>
 
